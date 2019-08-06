@@ -6,6 +6,8 @@ ruby '2.6.3'
 gem 'rails', '~> 4.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.21.0'
+# App server
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
