@@ -5,7 +5,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.21.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
@@ -38,7 +38,7 @@ gem 'simple_form'
 gem 'bcrypt', '~> 3.1.7'
 
 # Admin login
-gem 'devise'
+gem 'devise', '~>3.5.1'
 
 group :development do
     gem 'pry-rails'
