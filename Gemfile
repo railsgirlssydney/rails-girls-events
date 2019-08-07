@@ -30,7 +30,7 @@ gem 'simple_form'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Admin login
-gem 'devise', '~>3.5.1'
+gem 'devise'
 
 group :development do
   gem 'pry-rails'
