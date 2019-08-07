@@ -1,8 +1,8 @@
 # README
 
 ## Requirements
-- Ruby 2.6
-- Postgres
+- Ruby 2.6.0
+- [Postgres](Gemfile#line#7)
 - Rails 4
 - Heroku access
 
@@ -10,6 +10,26 @@
 
 ```bash
 $ bin/setup
+```
+
+## Database 
+
+Generate a backup
+
+```bash
+$ heroku pg:backups:capture --app rails-girls-events
+```
+
+Download the latest dump
+
+```bash
+$ heroku pg:backups:download -a rails-girls-events
+```
+
+Restore the database, change the `PG_USERNAME` field to your local config: 
+
+```bash
+$ pg_restore -h localhost -U PG_USERNAME -d rails-girls-events_development --no-owner --clean --verbose --format custom latest.dump
 ```
 
 ## Creating new Rails Girls Events
