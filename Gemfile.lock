@@ -46,6 +46,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     acts_as_commentable (4.0.2)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
     annotate (2.7.5)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
@@ -82,6 +84,8 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    css_parser (1.7.0)
+      addressable
     debug_inspector (0.0.3)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -99,6 +103,7 @@ GEM
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    htmlentities (4.3.4)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
@@ -129,6 +134,13 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    premailer (1.11.1)
+      addressable
+      css_parser (>= 1.6.0)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.10.3)
+      actionmailer (>= 3)
+      premailer (~> 1.7, >= 1.7.9)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -137,6 +149,7 @@ GEM
     pry-stack_explorer (0.4.9.3)
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
+    public_suffix (3.1.1)
     puma (3.12.1)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -238,6 +251,7 @@ DEPENDENCIES
   jquery-rails
   meta_request
   pg (~> 0.21)
+  premailer-rails
   pry-rails
   pry-stack_explorer
   puma (~> 3.0)

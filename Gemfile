@@ -26,6 +26,8 @@ gem 'acts_as_commentable'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'sendgrid'
+# Premailer for styling HTML emails with CSS
+gem 'premailer-rails'
 gem 'simple_form'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
