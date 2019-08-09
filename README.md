@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/railsgirlssydney/rails-girls-events.svg?branch=master)](https://travis-ci.com/railsgirlssydney/rails-girls-events)
+
 # README
 
 ## Requirements
