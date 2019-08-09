@@ -1,0 +1,32 @@
+@import 'base/variables';
+
+footer,
+.footer {
+  background: $brand-color-black;
+  color: #ffffff;
+  display: flex;
+  padding: 16px;
+  width: 100%;
+
+  > div {
+    justify-content: space-around;
+    padding: 0 20px;
+    width: 1fr;
+  }
+
+  h4 {
+    line-height: 2;
+  }
+
+  a {
+    background-color: $brand-color-shadow;
+    margin: .5em;
+    line-height: 2.5;
+    padding: .5em;
+  }
+
+  a:hover {
+    color: $brand-color-light;
+    transition: color .5s ease;
+  }
+}
