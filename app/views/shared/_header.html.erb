@@ -1,0 +1,13 @@
+<header>
+  <div class="container_12">
+    <a href="/">
+      <%= image_tag('rgs_white_460x90.svg', size: '260x32', alt: 'Rails Girls Sydney, Australia') %>
+    </a>
+    <div class="nav-links">
+      <% if admin_signed_in? %>
+        <%= link_to 'Events', events_path, class: 'user-link' %>
+        <%= link_to 'Sign Out', destroy_admin_session_path, class: 'user-link' %>
+      <% end %>
+    </div>
+  </div>
+</header>

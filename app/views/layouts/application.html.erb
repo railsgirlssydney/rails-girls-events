@@ -1,35 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
   <title>Rails Girls Events</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application'%>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- To run web application in full-screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+  <!-- Has no effect unless you have the previous meta tag -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Rails Girls Sydney">
+  <meta name="theme-color" content="#d3360b"/>
+  <link rel="manifest" href="/manifest.json">
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Recommended favicon format -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
+  <link rel="apple-touch-icon" href="/apple-icon-precomposed.png">
+  <script src="https://kit.fontawesome.com/ca11d69fc1.js"></script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.png' %>
 
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
   <div id="background">
-    <header>
-      <div class="container_12">
-        <a href="/">
-          <%= image_tag('rgs_white_460x90.svg', size: '260x32', alt: 'Rails Girls Sydney, Australia') %>
-        </a>
-        <div class="nav-links">
-        <% if admin_signed_in? %>
-          <%= link_to 'Events', events_path, class: 'user-link' %>
-          <%= link_to 'Sign Out', destroy_admin_session_path, class: 'user-link' %>
-        <% end %>
-      </div>
-      </div>
-    </header>
+    <%= render "shared/header" %>
 
     <div id="container">
       <%= yield %>
     </div>
 
+    <%= render "shared/footer" %>
   </div>
 </body>
 </html>
