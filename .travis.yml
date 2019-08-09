@@ -12,9 +12,6 @@ before_script:
 language: ruby
 rvm:
  - 2.6.0
-test:
-  adapter: postgresql
-  database: travis_ci_test
 script:
  — bundle install
  — bundle exec rake db:create
