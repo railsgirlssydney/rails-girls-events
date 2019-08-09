@@ -1,9 +1,9 @@
 # README
 
 ## Requirements
-- Ruby 2.6.0
-- [Postgres](Gemfile#line#7)
-- Rails 4
+- [Ruby](.ruby-version) 2.6.0
+- [Postgres](Gemfile#line#7) 9.6
+- Rails 4.2
 - Heroku access
 
 ## Setup
