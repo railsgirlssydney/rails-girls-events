@@ -13,8 +13,8 @@ language: ruby
 rvm:
  - 2.6.0
 script:
- — bundle install
- — bundle exec rake db:create
+ - bundle install
+ - bundle exec rake db:create
  - bundle exec rake db:migrate
  - bundle exec rspec
   
