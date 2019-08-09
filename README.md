@@ -60,3 +60,13 @@ You can view the mail templates at these routes:
 [Received email](http://localhost:3000/rails/mailers/applications_mailer/application_received)  
 [Success email](http://localhost:3000/rails/mailers/applications_mailer/application_success)  
 [Rejected email](http://localhost:3000/rails/mailers/applications_mailer/application_rejected)  
+
+# Contributing
+
+Please read our [Contributing guidelines](CONTRIBUTING.md) before anything else. 
+
+- Fork it
+- Create your feature branch `$ git checkout -b feature/my-new-feature`
+- Commit your changes `$ git commit -am 'Added some feature'`
+- Push to the branch `$ git push origin feature/my-new-feature`
+- Create new [Pull Request](https://github.com/railsgirlssydney/rails-girls-events/pulls)
