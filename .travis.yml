@@ -1,0 +1,20 @@
+dist: bionic
+addons:
+  postgresql: 9.6
+services:
+  - postgresql
+before_install:
+  - "rm ${BUNDLE_GEMFILE}.lock"
+  - "travis_retry gem update --system"
+  - "travis_retry gem install bundler -v 1.17.3"
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+language: ruby
+rvm:
+ - 2.6.0
+script:
+ - bundle install
+ - bundle exec rake db:create
+ - bundle exec rake db:migrate
+ - bundle exec rspec
+  
