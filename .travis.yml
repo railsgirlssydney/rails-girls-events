@@ -3,11 +3,18 @@ addons:
   postgresql: 9.6
 services:
   - postgresql
+before_install:
+  - "rm ${BUNDLE_GEMFILE}.lock"
+  - "travis_retry gem update --system"
+  - "travis_retry gem install bundler"
 before_script:
-  - psql -c 'create database rails-girls-events_test;' -U postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
 language: ruby
 rvm:
- - 2.6.0
+ - 2.6
+test:
+  adapter: postgresql
+  database: travis_ci_test
 script:
  — bundle install — jobs=3 — retry=3
  — bundle exec rake db:create
