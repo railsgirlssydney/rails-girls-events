@@ -32,7 +32,7 @@ Restore the database, change the `PG_USERNAME` field to your local config:
 $ pg_restore -h localhost -U PG_USERNAME -d rails-girls-events_development --no-owner --clean --verbose --format custom latest.dump
 ```
 
-## Creating new Rails Girls Events
+## Running the app
 
 Start the app:
 
@@ -42,24 +42,23 @@ $ bundle exec rails s
 
 Visit [http://localhost:3000](http://localhost:3000)
 
-### Adding new events
+### Testing
 
-To create a new rails girls event go to 
-`/events` and click 'Create'
+Testing is with Capybara and Rspec, run:
 
-The event will require a title, and asks whether it will be the current event or not.
+```bash
+$ bundle exec rspec
+```
 
-The current event will be the event that all new applications will be subscribed to.
+This task investigates the routes definition, then shows the unused routes and unreachable action methods.
 
-You will not be allowed to have more than one event as 'current'.
+```bash
+$ rake traceroute
+```
 
+### How to use the app
 
-# Viewing the mailers
-
-You can view the mail templates at these routes:  
-[Received email](http://localhost:3000/rails/mailers/applications_mailer/application_received)  
-[Success email](http://localhost:3000/rails/mailers/applications_mailer/application_success)  
-[Rejected email](http://localhost:3000/rails/mailers/applications_mailer/application_rejected)  
+Further information on the usage of the app can be found in the [Wiki](https://github.com/railsgirlssydney/rails-girls-events/wiki).
 
 # Contributing
 
