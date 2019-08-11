@@ -6,10 +6,14 @@
 
 # README
 
+Rails Girls Events is an app developed to assist in registering and managing attendees for Rails Girls Sydney.
+
+[Changelog](CHANGELOG.md)
+
 ## Requirements
 - [Ruby](.ruby-version) 2.6.0
 - [Postgres](Gemfile#line#7) 9.6
-- Rails 4.2
+- [Rails 4.2](Gemfile#line#5)
 - Heroku access
 
 ## Setup
@@ -65,6 +69,10 @@ $ rake traceroute
 ### How to use the app
 
 Further information on the usage of the app can be found in the [Wiki](https://github.com/railsgirlssydney/rails-girls-events/wiki).
+
+# Good to knows
+
+[Changelog Generator](https://github.com/github-changelog-generator/github-changelog-generator) is installed locally to generate the output file. 
 
 # Contributing
 
