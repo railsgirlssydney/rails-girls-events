@@ -1,9 +1,15 @@
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+
+[![Build Status](https://travis-ci.com/railsgirlssydney/rails-girls-events.svg?branch=master)](https://travis-ci.com/railsgirlssydney/rails-girls-events)
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
+
 # README
 
 ## Requirements
-- Ruby 2.6.0
-- [Postgres](Gemfile#line#7)
-- Rails 4
+- [Ruby](.ruby-version) 2.6.0
+- [Postgres](Gemfile#line#7) 9.6
+- Rails 4.2
 - Heroku access
 
 ## Setup
