@@ -30,9 +30,6 @@ gem 'simple_form'
 gem 'bcrypt', '~> 3.1.7'
 # Admin login
 gem 'devise'
-# Traceroute shows you unused routes and unreachable action methods
-gem 'traceroute'
-
 
 group :development do
   gem 'pry-rails'
@@ -44,18 +41,20 @@ group :development do
   gem 'meta_request'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # Traceroute shows you unused routes and unreachable action methods
+  gem 'traceroute'
 end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  # Rspec
-  gem 'rspec-rails', '~> 3.8'
+  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 4.0.0.beta2' # required for rails 6 compatibility
+  gem 'rails-controller-testing'      # rspec 4 requirement
+  gem 'capybara'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem 'capybara'
+  gem 'simplecov'
 end
