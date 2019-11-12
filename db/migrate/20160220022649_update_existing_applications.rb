@@ -1,4 +1,4 @@
-class UpdateExistingApplications < ActiveRecord::Migration
+class UpdateExistingApplications < ActiveRecord::Migration[6.0]
   def up
     Event.new(title: 'Sydney - August 21-22, 2015').save
     event = Event.last

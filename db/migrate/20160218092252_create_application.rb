@@ -1,4 +1,4 @@
-class CreateApplication < ActiveRecord::Migration
+class CreateApplication < ActiveRecord::Migration[6.0]
   def change
     create_table :applications do |t|
       t.integer :user_id

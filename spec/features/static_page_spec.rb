@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'navigate' do
+describe 'Home page' do
   it 'can be reached' do
     visit root_path
     expect(page.status_code).to eq(200)

@@ -14,8 +14,7 @@ rvm:
 - 2.6.0
 script:
 - bundle install
-- bundle exec rake db:create
-- bundle exec rake db:migrate
+- bundle exec rails db:migrate
 - bundle exec rspec
 deploy:
   provider: heroku
@@ -23,5 +22,5 @@ deploy:
     secure: gUHYDsT+XlPAgu4wBijhsMSn5GORhBemkSbDRdOF3eEWY6mDK/flh7K4I5DACIk6s1MaXa2o4mvIdfNydGre2t6Q5oqkHzf+vKEgiEimvbsaDZDjQk3Gm0wKccDA9BHkBJzndFd4WW7ZOTLcUKQ16BvtulPLRYMwFKNNv/I41jNdI+jWQNSJurvJyAEZiN/h8Es85H495d5xQsLMed/Kx2IuDq4//4cPZfRlLDlR31oIhOa1r/M65I49iY1YOZ34JuH8PUw5kfj97fVmOCLfIVEeEX7jbHEF4YHkfwKikxTNFK1qWmdRx2fZSH0QLGnJaTkjK6xlGCOf/gu8ZMkx4tRBBCQjby4wUGAp3iqBTstuug/sEZmSY+P7Y6BRU9UGcdU7w30Si2wV9NMyu9Trd2aAP7mSxOdFDOybxIsxM2l3a5UaQl1bIzOoT/TSy/6C/pL+CTzmUkw1tWvu1ADqHNvqMfcQJQH+dBIZYnDkmEgqys+m6aM5HtTARTRWYTXc8heiAu30OCf86/GuXBCzRd/18cUi0A2/zUUg4g788cqbnvAQs+igcIXLtwPkosb4z6OH9pPPamGlrTh/2BI3R7C+3m0yiZClr1830Fqc+HRyiHzdEtTnRjY9BXyXlst3dmdeZ2fKX5cWLgboTmJ30Jg4eV6+Ge2tCSLZDLes+3E=
   app: rails-girls-events
   run:
-    - "rake db:migrate"
-    - "rake cleanup"
+    - "rails db:migrate"
+    - "rails cleanup"
