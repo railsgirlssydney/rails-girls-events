@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :admins
 
   authenticate :admin do
-    resources :users, except: [:create, :edit]
+    resources :users, except: [:new, :create, :edit, :update, :show, :destroy]
     resources :events do
       get '/data', to: 'events#data'
     end
