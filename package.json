@@ -1,4 +1,10 @@
 {
+  "name": "unlicensed",
+  "version": "1.0.0",
+  "description": "UNLICENSED is accepted",
+  "main": "index.js",
+  "author": "Joe <e@example.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "@rails/webpacker": "^4.0.7"
   },
