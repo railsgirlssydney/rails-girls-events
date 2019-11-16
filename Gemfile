@@ -52,9 +52,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'capybara', '~> 3.29'
 end
 
 group :test do
-  gem 'capybara', '~> 3.29'
   gem 'simplecov'
 end
