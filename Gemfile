@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0'
+gem 'rails', '>= 6'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.21'
+gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma'
 # Use SCSS for stylesheets
-gem 'sassc-rails', '~> 2.1'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 4.2'
 gem 'jquery-rails'
@@ -29,7 +29,6 @@ gem 'simple_form'
 gem 'bcrypt', '~> 3.1'
 # Admin login
 gem 'devise', '~> 4.7'
-gem 'webpacker', '~> 4.0'
 
 group :development do
   gem 'pry-rails'
