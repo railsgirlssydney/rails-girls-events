@@ -10,14 +10,14 @@ gem 'puma'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.2'
+gem 'uglifier'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5.2'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'acts_as_commentable'
 gem 'figaro'
 gem 'font-awesome-rails'
@@ -46,12 +46,12 @@ end
 
 group :development, :test do
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 4.0.0.beta2' # required for rails 6 compatibility
-  gem 'rails-controller-testing'      # rspec 4 requirement
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
   # Spring speeds up development by keeping your application running in the background
   gem 'spring'
   gem 'spring-watcher-listen'
-  gem 'capybara', '~> 3.29'
+  gem 'capybara'
 end
 
 group :test do
