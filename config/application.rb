@@ -28,5 +28,8 @@ module RailsGirlsEvents
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # Rails 6 and Zeitwerk don't play nice for Heroku https://stackoverflow.com/a/60880320/10907864
+    config.autoloader = :classic
   end
 end
