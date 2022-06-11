@@ -10,13 +10,12 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new
+    @event = Event.new(event_params)
 
-    if @event.valid?
-      @event.save
-      redirect_to events_path
+    if @event.save
+      redirect_to events_path, notice: 'Event created'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -25,7 +24,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to events_path
+      redirect_to events_path, notice: 'Event updated'
     else
       render :edit
     end
