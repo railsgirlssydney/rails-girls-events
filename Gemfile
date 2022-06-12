@@ -28,10 +28,11 @@ gem 'simple_form'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1'
 # Admin login
-gem 'devise', '~> 4.7'
+gem 'devise'
+gem 'rollbar'
 
 group :development do
-  gem 'pry-rails'
+  gem 'pry'
   gem 'pry-stack_explorer'
   gem 'annotate'
   # gem 'quiet_assets'
@@ -42,10 +43,10 @@ group :development do
   gem 'web-console'
   # Traceroute shows you unused routes and unreachable action methods
   gem 'traceroute'
+  gem 'scss_lint', require: false
 end
 
 group :development, :test do
-  gem 'pry'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   # Spring speeds up development by keeping your application running in the background

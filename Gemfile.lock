@@ -139,8 +139,6 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    pry-rails (0.3.9)
-      pry (>= 0.10.4)
     pry-stack_explorer (0.6.1)
       binding_of_caller (~> 1.0)
       pry (~> 0.13)
@@ -191,6 +189,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rollbar (3.3.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -208,6 +207,11 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -216,6 +220,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scss_lint (0.59.0)
+      sass (~> 3.5, >= 3.5.5)
     sendgrid (1.2.4)
       json
     simple_form (5.1.0)
@@ -273,7 +279,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
-  devise (~> 4.7)
+  devise
   figaro
   font-awesome-rails
   jbuilder
@@ -281,13 +287,14 @@ DEPENDENCIES
   meta_request
   pg
   pry
-  pry-rails
   pry-stack_explorer
   puma
   rails (~> 6)
   rails-controller-testing
+  rollbar
   rspec-rails
   sassc-rails
+  scss_lint
   sendgrid (~> 1.2)
   simple_form
   simplecov
