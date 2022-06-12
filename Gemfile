@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 6'
+gem 'rails', '~> 6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -45,7 +45,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-byebug'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   # Spring speeds up development by keeping your application running in the background
