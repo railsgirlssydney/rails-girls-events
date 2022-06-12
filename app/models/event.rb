@@ -82,9 +82,11 @@ class Event < ActiveRecord::Base
   def current_event
     return unless live?
 
-    if Event.where(live: true).exists?
-      errors['live'] = "An event is already live, only one live event allowed at a time"
-    end
+    errors.add("live", message: "An event is already live, only one live event allowed at a time") if Event.where(live: true).exists?
+
+    # if Event.where(live: true).exists?
+    #   errors['live'] = "An event is already live, only one live event allowed at a time"
+    # end
   end
 
 end

@@ -31,8 +31,8 @@ class Application < ActiveRecord::Base
   belongs_to :event
   has_many :votes
 
-  acts_as_commentable
-  accepts_nested_attributes_for :comments
+  # acts_as_commentable
+  # accepts_nested_attributes_for :comments
 
   # scopes
   scope :needs_admin_response, -> { where('admin_status=? OR admin_status=?', 'applied', 'deferred') }
@@ -43,8 +43,7 @@ class Application < ActiveRecord::Base
 
   def self.allowed_params
     [ :track, :over_18, :previous_attendance, :programming_experience, :reason,
-      :tshirt_size, :admin_status, :user_status, :gender, {dietary_requirements: []},
-      :extra_info, { comments_attributes: Comment.allowed_params }]
+      :tshirt_size, :admin_status, :user_status, :gender, {dietary_requirements: []}]
   end
 
   def count_up_votes

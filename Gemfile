@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0'
+gem 'rails', '>= 6'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.3'
+gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 5.6'
+gem 'puma'
 # Use SCSS for stylesheets
-gem 'sassc-rails', '~> 2.1'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.2'
+gem 'uglifier'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5.2'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -29,7 +29,6 @@ gem 'simple_form'
 gem 'bcrypt', '~> 3.1'
 # Admin login
 gem 'devise', '~> 4.7'
-gem 'webpacker', '~> 4.0'
 
 group :development do
   gem 'pry-rails'
@@ -47,12 +46,12 @@ end
 
 group :development, :test do
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 4.0.0.beta2' # required for rails 6 compatibility
-  gem 'rails-controller-testing'      # rspec 4 requirement
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
   # Spring speeds up development by keeping your application running in the background
   gem 'spring'
   gem 'spring-watcher-listen'
-  gem 'capybara', '~> 3.29'
+  gem 'capybara'
 end
 
 group :test do

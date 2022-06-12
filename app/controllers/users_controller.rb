@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user
       @user.applications.new application_params
     else
-      @user = User.new user_params
+      @user = User.new
     end
     application = @user.applications.last
 
