@@ -1,7 +1,5 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
-[![Build Status](https://travis-ci.com/railsgirlssydney/rails-girls-events.svg?branch=master)](https://travis-ci.com/railsgirlssydney/rails-girls-events)
-
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
 
 # README
@@ -11,9 +9,9 @@ Rails Girls Events is an app developed to assist in registering and managing att
 [Changelog](CHANGELOG.md)
 
 ## Requirements
-- [Ruby](.ruby-version) 2.6.0
-- [Postgres](Gemfile#line#7) 9.6
-- [Rails 4.2](Gemfile#line#5)
+- [Ruby](.ruby-version) 3.0
+- [Postgres](Gemfile#line#7)
+- [Rails 6](Gemfile#line#5)
 - Heroku access
 
 ## Setup
