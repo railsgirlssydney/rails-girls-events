@@ -43,7 +43,7 @@ class Application < ActiveRecord::Base
 
   def self.allowed_params
     [ :track, :over_18, :previous_attendance, :programming_experience, :reason,
-      :tshirt_size, :admin_status, :user_status, :gender, {dietary_requirements: []}]
+      :tshirt_size, :admin_status, :user_status, :gender, {dietary_requirements: []}, :extra_info]
   end
 
   def count_up_votes
