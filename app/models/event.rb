@@ -79,6 +79,10 @@ class Event < ActiveRecord::Base
     self.applications.where(tshirt_size: 'xl').count
   end
 
+  def self.current_active_event
+    where(live: true).first
+  end
+
   def current_event
     return unless live?
 
