@@ -4,24 +4,24 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @user.applications.build
+    @active_event = Event.current_active_event
   end
 
   def create
     @user = User.find_by_email(user_params[:email])
+    @active_event = Event.current_active_event
 
     if @user
       @user.applications.new application_params
     else
-      @user = User.new
+      @user = User.new(user_params)
     end
-    application = @user.applications.last
 
-    application.event = Event.where(:live => true).first
-
-    if @user.valid? && application.valid?
+    if @user.valid?
       @user.save
-      application.send_application_thanks
+      @user.applications.last.send_application_thanks
     end
+
     render :new
   end
 
