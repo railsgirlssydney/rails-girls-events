@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Home page' do
-
   before(:each) do 
     Event.create(title: 'test_event', live: true)
   end

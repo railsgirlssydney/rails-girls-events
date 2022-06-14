@@ -80,7 +80,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.current_active_event
-    where(:live => true).first
+    where(live: true).first
   end
 
   def current_event
